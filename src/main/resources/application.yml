@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: test-feign
+  test:
+    feign:
+      url: http://127.0.0.1:8081
+      auth:
+        name: admin
+        password: password
+      opion:
+        connectTimeoutMillis: 1000
+        readTimeoutMillis: 3500
+      retry:
+        period: 5000
+        maxPeriod: 5000
+        maxAttempts: 3
