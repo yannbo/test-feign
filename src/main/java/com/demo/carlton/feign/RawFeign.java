@@ -12,7 +12,7 @@ import java.net.URI;
  * if need to add strict policy, need to target to concrete feign.
  * sample: <code>com.demo.carlton.feign.FeignInstance1</code>
  */
-@FeignClient(name = "just-a-name", url = "")
+@FeignClient(name = "just-a-name", url = "",configuration = RemoteConfiguration2.class)
 public interface RawFeign {
 
     @RequestLine("POST /getUser2?id={id}")
